@@ -1,4 +1,4 @@
-package io.github.vinge1718.restaurant;
+package io.github.emakuthi.restaurant;
 
 import org.junit.Test;
 

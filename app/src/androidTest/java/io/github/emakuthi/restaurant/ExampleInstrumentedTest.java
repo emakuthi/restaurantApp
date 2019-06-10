@@ -1,4 +1,4 @@
-package io.github.vinge1718.restaurant;
+package io.github.emakuthi.restaurant;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("io.github.vinge1718.restaurant", appContext.getPackageName());
+        assertEquals("io.github.emakuthi.restaurant", appContext.getPackageName());
     }
 }
