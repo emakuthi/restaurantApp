@@ -1,4 +1,4 @@
-package io.github.emakuthi.restaurant;
+package io.github.emakuthi.restaurant.ui;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.github.emakuthi.restaurant.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = MainActivity.class.getSimpleName();

@@ -1,4 +1,4 @@
-package io.github.emakuthi.restaurant;
+package io.github.emakuthi.restaurant.models;
 
 import java.util.ArrayList;
 

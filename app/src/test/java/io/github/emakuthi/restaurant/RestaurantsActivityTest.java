@@ -9,6 +9,8 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.Robolectric;
 
 
+import io.github.emakuthi.restaurant.ui.RestaurantsActivity;
+
 import static org.junit.Assert.*;
 
 @RunWith(RobolectricTestRunner.class)

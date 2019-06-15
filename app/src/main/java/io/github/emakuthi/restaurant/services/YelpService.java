@@ -1,12 +1,13 @@
-package io.github.emakuthi.restaurant;
+package io.github.emakuthi.restaurant.services;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.XML;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
+import io.github.emakuthi.restaurant.Constants;
+import io.github.emakuthi.restaurant.models.Restaurant;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.HttpUrl;

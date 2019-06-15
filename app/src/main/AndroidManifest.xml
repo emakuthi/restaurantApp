@@ -10,14 +10,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name="io.github.emakuthi.restaurant.RestaurantsActivity">
+        <activity android:name="io.github.emakuthi.restaurant.ui.RestaurantsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.github.emakuthi.restaurant.MainActivity">
+                android:value="io.github.emakuthi.restaurant.ui.MainActivity">
             </meta-data>
         </activity>
         <activity
-            android:name="io.github.emakuthi.restaurant.MainActivity"
+            android:name="io.github.emakuthi.restaurant.ui.MainActivity"
             android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
