@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -22,6 +23,8 @@ import okhttp3.Response;
 public class RestaurantsActivity extends AppCompatActivity {
     public static final String TAG = RestaurantsActivity.class.getSimpleName();
     @BindView(R.id.locationTextView) TextView mLocationTextView;
+    public ArrayList<Restaurant> mRestaurants = new ArrayList<>();
+
     @BindView(R.id.listView) ListView mListView;
     private String[] restaurants = new String[] {"Mi Mero Mole", "Mother's Bistro",
             "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
@@ -70,6 +73,8 @@ public class RestaurantsActivity extends AppCompatActivity {
                 try{
                     String jsonData = response.body().string();
                     Log.v(TAG, jsonData);
+                    mRestaurants = yelpService.processResults(response);
+
                 }catch(IOException e){
                     e.printStackTrace();
                 }
