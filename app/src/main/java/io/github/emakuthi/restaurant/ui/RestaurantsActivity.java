@@ -42,7 +42,6 @@ public class RestaurantsActivity extends AppCompatActivity {
 
     }
 
-
     private void getRestaurants(String location){
         final YelpService yelpService = new YelpService();
 
