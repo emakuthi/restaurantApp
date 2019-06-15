@@ -13,7 +13,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.findRestaurantsButton) Button mFindRestaurantsButton;
     @BindView(R.id.locationEditText) EditText mLocationEditText;
@@ -27,14 +27,16 @@ public class MainActivity extends AppCompatActivity {
 
         Typeface ostrichFont = Typeface.createFromAsset(getAssets(), "fonts/ostrich-regular.ttf");
         mAppNameTextView.setTypeface(ostrichFont);
-        mFindRestaurantsButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
-                String location = mLocationEditText.getText().toString();
-                intent.putExtra("location", location);
-                startActivity(intent);
-            }
-        });
+        mFindRestaurantsButton.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v){
+        if(v==mFindRestaurantsButton) {
+            Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
+            String location = mLocationEditText.getText().toString();
+            intent.putExtra("location", location);
+            startActivity(intent);
+        }
     }
 }
