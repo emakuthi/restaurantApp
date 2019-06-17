@@ -2,6 +2,7 @@ package io.github.emakuthi.restaurant.services;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.json.XML;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -36,11 +37,13 @@ public class YelpService {
     }
 
     public ArrayList<Restaurant> processResults(Response response){
+//        String newUrlString = API-Url.replace("http","https");
         ArrayList<Restaurant> restaurants = new ArrayList<>();
-        try{ String jsonData = response.body().string();
+        try{
+            String jsonData = response.body().string();
             JSONObject yelpJSON = new JSONObject(jsonData);
             JSONArray businessesJSON = yelpJSON.getJSONArray("businesses");
-
+//
 //            String xmlData = response.body().string();
 //            JSONObject yelpJSON = XML.toJSONObject(xmlData);
 //            JSONArray businessesJSON = yelpJSON.getJSONArray("businesses");

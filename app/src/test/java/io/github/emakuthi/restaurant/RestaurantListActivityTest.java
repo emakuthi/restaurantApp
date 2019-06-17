@@ -9,20 +9,20 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.Robolectric;
 
 
-import io.github.emakuthi.restaurant.ui.RestaurantsActivity;
+import io.github.emakuthi.restaurant.ui.RestaurantListActivity;
 
 import static org.junit.Assert.*;
 
 @RunWith(RobolectricTestRunner.class)
 
-public class RestaurantsActivityTest {
-    private RestaurantsActivity activity;
+public class RestaurantListActivityTest {
+    private RestaurantListActivity activity;
     private ListView mRestaurantListView;
 
     @Before
     public void setUp() throws Exception {
-        activity =Robolectric.setupActivity(RestaurantsActivity.class);
-        mRestaurantListView=(ListView) activity.findViewById(R.id.listView);
+        activity =Robolectric.setupActivity(RestaurantListActivity.class);
+        mRestaurantListView=(ListView) activity.findViewById(R.id.recyclerView);
     }
 
     @Test
